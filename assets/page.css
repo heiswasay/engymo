@@ -1,0 +1,46 @@
+/* Inner pages: service, industry and hub pages */
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;padding:10px 16px;border-radius:10px;background:var(--orange);color:#000;font-weight:700;text-decoration:none}
+.skip:focus{left:12px}
+.nav-links a[aria-current="page"]{color:var(--fg);box-shadow:inset 0 -2px 0 var(--orange)}
+.crumbs{padding-top:22px}
+.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:14px;color:var(--muted)}
+.crumbs li{display:flex;align-items:center;gap:6px}
+.crumbs li+li::before{content:"/";color:var(--line)}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{color:var(--fg)}
+.crumbs [aria-current]{color:var(--fg)}
+.page-hero{padding-block:40px 80px}
+.page-hero h1{font-size:clamp(38px,4.2vw,60px)}
+.page-hero .hero-sub{max-width:54ch;font-size:18px}
+@media (max-width:900px){.crumbs{display:none}.page-hero{padding-block:0 48px}}
+/* Linked service cards */
+a.svc-link{text-decoration:none;color:inherit}
+.svc .more,.ind-card .more{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding-top:6px;color:var(--orange-text);font-weight:600;font-size:15px}
+.svc .more svg,.ind-card .more svg{width:16px;height:16px;transition:transform .2s ease}
+a.svc-link:hover .more svg,.ind-card:hover .more svg{transform:translateX(3px)}
+.svc-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1100px){.svc-grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.svc-grid-4{grid-template-columns:1fr}}
+@media (max-width:620px){a.svc-link .more{flex-basis:100%}}
+/* Guide: long-form content with a sticky side card */
+.guide{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:64px;align-items:start}
+.prose{max-width:72ch;min-width:0}
+.prose h2{font-size:clamp(26px,3vw,36px);font-weight:800;margin-top:44px}
+.prose h2:first-child{margin-top:0}
+.prose p{color:var(--muted);font-size:18px;margin-top:16px;line-height:1.7}
+.prose strong{color:var(--fg)}
+.prose a,.faq details p a,.section-head p a{color:var(--orange-text);text-underline-offset:3px}
+.side-card{position:sticky;top:100px;display:flex;flex-direction:column;gap:16px;padding:28px;border-radius:var(--r);background:var(--panel);border:1px solid var(--line)}
+.side-card h2{font-size:24px;font-weight:800}
+.side-card > p:not(.eyebrow){color:var(--muted);font-size:15px}
+.side-card .terms li{font-size:14px;padding:7px 13px}
+.side-card .btn{align-self:flex-start}
+@media (max-width:1000px){.guide{grid-template-columns:1fr;gap:40px}.side-card{position:static}}
+@media (max-width:620px){.prose p{font-size:16px}.side-card{padding:22px}.side-card .btn{align-self:stretch}}
+.band-ctas{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:620px){.band-ctas .btn{width:100%}}
+/* Industries hub */
+a.ind-card{text-decoration:none;color:inherit}
+a.ind-card h3{color:var(--fg)}
+a.ind-card:hover h3{color:var(--orange-text)}
+.foot-col h3+ul{margin-bottom:4px}

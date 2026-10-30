@@ -1,4 +1,25 @@
+# Engymo: gym and martial arts marketing agency, Karachi, Pakistan
 User-agent: *
 Allow: /
+Disallow: /social/
+
+# Search engines and AI answer engines are welcome to read and cite this site
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: DuckAssistBot
+User-agent: meta-externalagent
+Allow: /
+Disallow: /social/
 
 Sitemap: https://engymo.com/sitemap.xml
